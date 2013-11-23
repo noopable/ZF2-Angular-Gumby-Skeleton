@@ -8,3 +8,8 @@ nbproject
 .settings
 composer.lock
 vendor/bin
+INSTALL.txt
+LICENSE.txt
+README.txt
+demos/
+extras/documentation
