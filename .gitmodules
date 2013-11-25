@@ -4,3 +4,6 @@
 [submodule "vendor/Gumby"]
 	path = vendor/Gumby
 	url = https://github.com/noopable/Gumby.git
+[submodule "vendor/ZF2"]
+	path = vendor/ZF2
+	url = https://github.com/noopable/zf2.git
