@@ -1,0 +1,28 @@
+// This will create a product grid that is 
+// 4 columns on desktop, 2 on tablets, and
+// 1 column on mobile devices.
+@charset "UTF-8";
+
+@import "modular-scale";
+
+@import "var/settings";
+@import "../../../vendor/Gumby/sass/var/lists";
+@import "../../../vendor/Gumby/sass/var/icons/entypo";
+
+@import "compass";
+
+@import "../../../vendor/Gumby/sass/functions/all";
+
+#my-foo-grid-container li.product {
+  @include fancytiles(4,2,1);
+  min-height: 300px;
+  height: auto;
+}
+
+// 4 columns on desktop, 2 at 600px and,
+// 1 column on mobile devices
+#my-baz-grid-container li.product {
+  @include fancytiles(4,2,1, $min-device-width, '600px', $row-max-width);
+  min-height: 300px;
+  height: auto;
+}
