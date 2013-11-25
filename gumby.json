@@ -1,0 +1,6 @@
+{
+	"build": {
+		"gumbyPath": "vendor/Gumby",
+		"outPath": "public/js"
+	}
+}
