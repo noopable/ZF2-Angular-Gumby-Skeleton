@@ -4,3 +4,6 @@
 [submodule "vendor/angular"]
 	path = vendor/angular
 	url = https://github.com/noopable/angular-seed.git
+[submodule "vendor/Gumby"]
+	path = vendor/Gumby
+	url = https://github.com/noopable/Gumby.git
