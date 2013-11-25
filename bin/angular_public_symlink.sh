@@ -5,10 +5,10 @@
 set d = pwd
 
 cd "$(cd -- "$(dirname -- "${BASH_SOURCE:-$0}")"; pwd)"
-cd ..
+cd ../public
 
 
-ln -s vendor/angular/app public_html
+ln -s ../vendor/angular/app angular
 
 cd $d
 

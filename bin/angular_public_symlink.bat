@@ -2,10 +2,10 @@
 
 rem Fix me: This is too dirty. 
 
-pushd %0\..\..
+pushd %0\..\..\public
 cls
 
-MKLINK /D public_html vendor\angular\app
+MKLINK /D angular ..\vendor\angular\app
 
 pause
 exit
