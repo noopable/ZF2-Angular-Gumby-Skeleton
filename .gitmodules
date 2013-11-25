@@ -1,6 +1,6 @@
 [submodule "vendor/ZF2"]
 	path = vendor/ZF2
-	url = https://github.com/zendframework/zf2.git
+	url = https://github.com/noopable/zf2.git
 [submodule "vendor/angular"]
 	path = vendor/angular
 	url = https://github.com/noopable/angular-seed.git
