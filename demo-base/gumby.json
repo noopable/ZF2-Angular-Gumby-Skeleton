@@ -1,0 +1,7 @@
+{
+	"build": {
+		"gumbyPath": "../vendor/Gumby",
+		"outPath": "public/_demo/js",
+                "files": ["data/js/docs.example.js"]
+	}
+}
