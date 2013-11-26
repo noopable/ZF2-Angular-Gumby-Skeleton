@@ -7,3 +7,6 @@
 [submodule "vendor/ZF2"]
 	path = vendor/ZF2
 	url = https://github.com/noopable/zf2.git
+[submodule "vendor/Claymate"]
+	path = vendor/Claymate
+	url = git@github.com:GumbyFramework/Claymate.git
