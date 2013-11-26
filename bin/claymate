@@ -1,0 +1,131 @@
+#! /usr/bin/env node
+// -*- js -*-
+
+"use strict";
+
+// Grab claymate library.
+var Claymate = require('../lib/claymate.js'),
+	JSONConfig = Claymate.getJSONConfig();
+
+var usage =
+"$0 [subcommand] [arguments]\n\
+\n\
+Use one of the following subcommands:\n\
+  build - Concatenate and minify the core gumby scripts.\n\
+  install - Creates a scaffold for your application with the reccomended setup.\n\
+  version - Shows this program's version number and exits.\n\
+\n\
+The options below will have which subcommand(s) they apply to in brackets\n\
+before the description.\n\
+";
+
+// Set up argument parsing
+var Optimist = require('optimist').usage(usage, {
+		'modules': {
+			description: '[build] Which modules to include in the build, comma separated. If omitted, defaults to all modules.',
+			alias: 'm'
+		},
+		'addons': {
+			description: '[build] A comma separated list of paths to additional non-core gumby module files.',
+			alias: ['add-ons', 'a']
+		},
+		'files': {
+			description: '[build] A comma separated list of paths to additional non-module files.',
+			alias: 'f'
+		},
+		'buildSourceMap': {
+			description: '[build] Boolean flag, pass it to build the sourcemap.',
+			boolean: true,
+			alias: 's'
+		},
+		'outPath': {
+			description: '[build] Where to write the minified and sourcemap files. If omitted, defaults to current directory.',
+			alias: 'o'
+		},
+		'gumbyPath': {
+			description: '[build] Which path to look for gumby in.',
+			alias: 'g'
+		},
+		'edge': {
+			description: '[install] Use the latest development version of gumby instead of the current release.',
+			boolean: true,
+			alias: 'e'
+		},
+		'quiet': {
+			description: '[all] Supresses non-error messages.',
+			boolean: true,
+			alias: 'q'
+		},
+		'version': {
+			description: 'Show this program\'s version and exit.',
+			boolean: true,
+			alias: 'v'
+		}
+
+	}).wrap(80),
+	argv = Optimist.argv;
+
+// Look for version request.
+if (argv.version) {
+	console.log(Claymate.getClaymateVersion());
+	return 0;
+}
+
+// Handle the subcommands
+switch (argv._[0]) {
+	case 'build':
+
+		var buildOpts = {
+			gumbyPath: getArg('gumbyPath', 'build'),
+			outPath: getArg('outPath', 'build'),
+			modules: getArg('modules', 'build', 'array'),
+			addons: getArg('addons', 'build', 'array'),
+			files: getArg('files', 'build', 'array'),
+			buildSourceMap: getArg('buildSourceMap', 'build'),
+			quiet: getArg('quiet', 'build')
+		};
+
+		Claymate.build(buildOpts);
+
+		break;
+
+	case 'install':
+
+		var installOpts = {
+			edge: getArg('edge', 'install'),
+			quiet: getArg('quiet', 'install')
+		};
+
+		Claymate.install(installOpts);
+
+		break;
+
+	default:
+
+		console.log(Optimist.help());
+
+		break;
+
+}
+
+/**
+ * Grabs value from cli argument, then json config, then null
+ * @param  {String} arg Which argument to retrieve
+ * @return {mixed} The value
+ */
+function getArg(arg, subcommand, type) {
+
+	if (argv[arg]) {
+		return (type === 'array') ? argv[arg].split(',') : argv[arg];
+	} else if (typeof JSONConfig[arg] !== 'undefined') {
+		return JSONConfig[arg];
+	} else if (
+		typeof JSONConfig[subcommand] !== 'undefined' &&
+		typeof JSONConfig[subcommand][arg] !== 'undefined'
+	) {
+		return JSONConfig[subcommand][arg];
+	} else {
+		return null;
+	}
+
+}
