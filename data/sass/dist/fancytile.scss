@@ -13,7 +13,7 @@
 
 @import "../../../vendor/Gumby/sass/functions/all";
 
-#my-foo-grid-container li.product {
+#my-tile-container li.tile {
   @include fancytiles(4,2,1);
   min-height: 300px;
   height: auto;
@@ -21,8 +21,8 @@
 
 // 4 columns on desktop, 2 at 600px and,
 // 1 column on mobile devices
-#my-baz-grid-container li.product {
-  @include fancytiles(4,2,1, $min-device-width, '600px', $row-max-width);
-  min-height: 300px;
+#my-small-tile-container li.tile {
+  @include fancytiles(3,2,1, $min-device-width, '600px', $row-max-width);
+  min-height: 220px;
   height: auto;
 }
