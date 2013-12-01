@@ -12,9 +12,9 @@ Compass::Frameworks.register('modular-scale', :path => File.expand_path("#{exten
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "../public/demo/css"
+css_dir = "../public/_demo/css"
 sass_dir = "data/sass"
-images_dir = "../public/demo/img"
+images_dir = "../public/_demo/img"
 
 # You can select your preferred output style here (can be overridden via the command line) :nested or :expanded or :compact or :compressed:
 output_style = :compact

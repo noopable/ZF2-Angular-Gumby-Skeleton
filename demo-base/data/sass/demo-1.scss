@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@import "modular-scale";
+
+@import "dist/var/settings";
+@import "compass";
+
+@import "../../../vendor/Gumby/sass/functions/all";
+/*============================
+    #sidebar-nav
+============================*/
+#sidebar-nav {
+    text-align: left;
+    li {
+        .skip.active {
+            background-color: red;
+        }
+        a {
+            background: none;
+            @include transition-duration(0.4s);
+        }
+        &.active a {
+            color: #fff;
+            background: #3085d6;
+            &:hover {
+                background: #3085d6;
+            }
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 30px;
+    }
+    a {
+        color: #555555;
+        display: block;
+        padding: 8px 14px;
+        &:hover {
+            background: #E9E9E9;
+        }
+    }
+    &.fixed {
+        border: 1px solid #d0d0d0;
+        top:130px !important;
+    }
+}
