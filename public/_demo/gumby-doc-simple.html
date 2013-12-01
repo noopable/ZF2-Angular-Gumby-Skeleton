@@ -5,7 +5,7 @@
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
 <!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
 
@@ -41,31 +41,58 @@
 
         <script src="js/libs/modernizr-2.6.2.min.js"></script>
     </head>
-    <body ng-app="myApp">
-        <div class="navcontain" ng-include="'_partials/navbar.html'">
+    <body>
+        <div class="navcontain">
+            <div class="pretty navbar fixed" id="nav4">
+                <div class="row">
+                    <a class="toggle" gumby-trigger="#nav4 &gt; ul" href="#"><i class="icon-menu"></i></a>
+                    <h1 class="four columns">
+                        <a href="#">
+                            AngularJS on <br>GumbyFramework
+                        </a>
+                    </h1>
+                    <ul class="eight columns">
+                        <li><a href="#">Demo</a></li>
+                        <li>
+                            <a href="#">Angular Demo</a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li><a href="angular-demo.html">demo-dist</a></li>
+                                    <li><a href="angular-async.html">demo-async</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Gumby Demo</a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li><a href="gumby-960grid.html">960 grid</a></li>
+                                    <li><a href="gumby-grid-fancytile.html">FancyTiles</a></li>
+                                    <li><a href="gumby-ui.html">Gumby UI</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="row view">
-            <div class="push_three eight columns" id="docs-content">
-                <ul class="c">
-                    <li><a href="#/view1">view1</a></li>
-                    <li><a href="#/view2">view2</a></li>
-                </ul>
-                <div ng-view  class="view-animate"></div>
-                <div id="c1" data-target="c1">content1<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>.</div>
-                <div id="c2" data-target="c2">content2<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>.</div>
-                <div id="c3" data-target="c3">content3<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>.</div>
-                <div id="c4" data-target="c4">content4<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>.</div>
-                <div id="c5" data-target="c5" ng-include="'_partials/partial2.html'">content5<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>.</div>
-            </div>
-            <div class="pull_eight three columns">
+            <div class="four columns">
                 <nav id="sidebar-nav-holder" class="vertical-nav" gumby-pin="[data-target='icons']">
                     <ul id="sidebar-nav" gumby-fixed="1" gumby-top="top">
-                        <li><a href="#c1" class="skip" gumby-offset="-100" gumby-update gumby-duration="600" gumby-goto="[data-target='c1']">c1</a></li>
-                        <li><a href="#c2" class="skip" gumby-offset="-100" gumby-update gumby-duration="600" gumby-goto="[data-target='c2']">c2</a></li>
-                        <li><a href="#c3" class="skip" gumby-offset="-100" gumby-update gumby-duration="600" gumby-goto="[data-target='c3']">c3</a></li>
-                        <li><a href="#c4" class="skip" gumby-offset="-100" gumby-update gumby-duration="600" gumby-goto="[data-target='c4']">c4</a></li>
+                        <li><a href="#c1" class="skip" gumby-offset="-100" gumby-update gumby-duration="600" gumby-goto="[data-target='c1']">メニュー1？</a></li>
+                        <li><a href="#c2" class="skip" gumby-offset="-100" gumby-update gumby-duration="600" gumby-goto="[data-target='c2']">メニュー2？</a></li>
+                        <li><a href="#c3" class="skip" gumby-offset="-100" gumby-update gumby-duration="600" gumby-goto="[data-target='c3']">メニュー3？</a></li>
+                        <li><a href="#c4" class="skip" gumby-offset="-100" gumby-update gumby-duration="600" gumby-goto="[data-target='c4']">メニュー4？</a></li>
                     </ul>                    
                 </nav>
+            </div>
+
+            <div class="eight columns" id="docs-content">
+                <div id="c1" data-target="c1">コンテンツ1<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>.</div>
+                <div id="c2" data-target="c2">コンテンツ2<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>.</div>
+                <div id="c3" data-target="c3">コンテンツ3<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>.</div>
+                <div id="c4" data-target="c4">コンテンツ4<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>.</div>
             </div>
         </div>
         <!-- Grab Google CDN's jQuery, fall back to local if offline -->
@@ -124,16 +151,5 @@
         <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
         <![endif]-->
 
-
-        <!-- In production use:
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-        -->
-        <script src="js/libs/angular/angular.js"></script>
-        <script src="js/libs/angular/angular-route.js"></script>
-        <script src="js/app/app.js"></script>
-        <script src="js/app/services.js"></script>
-        <script src="js/app/controllers.js"></script>
-        <script src="js/app/filters.js"></script>
-        <script src="js/app/directives.js"></script>
     </body>
 </html>
