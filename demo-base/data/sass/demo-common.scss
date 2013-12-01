@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@import "modular-scale";
+
+@import "dist/var/settings";
+@import "compass";
+
+@import "../../../vendor/Gumby/sass/functions/all";
+
+.navbar {
+        h1 {
+            color: $white;
+                    a {
+                        color: $white;
+                                    &:hover {
+                                        color: bisque;
+                                    }
+                    }
+            font-size: $larger;
+        }
+}
+
+.view {
+    padding-top: $gutter-in-px * 2;
+}

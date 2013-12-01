@@ -21,10 +21,13 @@ Gumby.ready(function() {
 		}
 
 		// hash bang on load?
+                //TODO:ハッシュが現在対象にしているリンク先に存在していたら、gumby.skipの方がいい。
 		if(hash.length > 3) {
 			var type = hash.substr(3, hash.length - 3);
 			$(window).load(function() {
 				setTimeout(function() {
+                                    //XSS?
+                                    //fixed in jQuery1.7? http://subtech.g.hatena.ne.jp/mala/20110624/1308881526
 					$('#sidebar-nav .skip[href="#'+type+'"]').trigger('gumby.skip');
 				}, 200);
 			});
@@ -39,6 +42,7 @@ Gumby.ready(function() {
 			window.location.hash = '#!/'+href.substr(1, href.length - 1);
 		});
 
+//history.back
 		$(window).on('popstate', function(e, another) {
 
 			var hash = window.location.hash;
@@ -47,7 +51,7 @@ Gumby.ready(function() {
 				return false;
 			}
 
-			hash = hash.replace('!/', '');
+			hash = hash.replace('#!/', '');
 			var $link = $('.skip[href="'+hash+'"]');
 
 			if(currentNav && currentNav !== hash && hash.length > 2 && $link.length) {
@@ -63,6 +67,7 @@ Gumby.ready(function() {
 				$closest;
 
 			if(!scrollOffset) {
+                                //戻す必要ある？
 				window.location.hash = '#!/';
 				clearTimeout(delay);
 				return;
@@ -71,7 +76,7 @@ Gumby.ready(function() {
 			// loop round sub nav links and find closest to top of page
 			for(i; i < length; i++) {
 				var $target = $($targets[i]),
-					targetOffset = $target.offset().top;
+					targetOffset = $target.offset().top - 100;// add mergin
 
 				if(!distance || targetOffset - scrollOffset < 20 && targetOffset > distance) {
 					distance = targetOffset;
@@ -96,21 +101,21 @@ Gumby.ready(function() {
 
 		$('#sidebar-nav-holder.vertical-nav').on('gumby.onFixed', function() {
 			var $this = $(this),
-				vnwidth = $this.parent('.columns').width(),
-				html = '<li>\
+				html = '<li id="gumby-back-to-top">\
 							<a href="#" class="skip" gumby-goto="top" gumby-duration="600">\
 								<i class="icon icon-up-open"></i> Back to top\
 							</a>\
 						</li>';
 
-			if(!$this.find('ul li:first-child a i').length) {
-				$this.find('ul').prepend(html);
+			if(!$this.find('#gumby-back-to-top').length) {
+				$this.find('ul').append(html);
 			}
 
 			Gumby.initialize('skiplink');
 
 		}).on('gumby.onUnfixed', function() {
-			$(this).find('ul li:first-child').remove();
+			//$(this).find('ul li:first-child').remove();
+                        $("#gumby-back-to-top").remove();
 		});
 	}
 });
