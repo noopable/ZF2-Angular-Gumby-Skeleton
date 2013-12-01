@@ -1,0 +1,11 @@
+/*============================ #sidebar-nav
+============================*/
+#sidebar-nav { text-align: left; }
+#sidebar-nav li .skip.active { background-color: red; }
+#sidebar-nav li a { background: none; -webkit-transition-duration: 0.4s; -moz-transition-duration: 0.4s; -o-transition-duration: 0.4s; transition-duration: 0.4s; }
+#sidebar-nav li.active a { color: #fff; background: #3085d6; }
+#sidebar-nav li.active a:hover { background: #3085d6; }
+@media only screen and (max-width: 767px) { #sidebar-nav { margin-bottom: 30px; } }
+#sidebar-nav a { color: #555555; display: block; padding: 8px 14px; }
+#sidebar-nav a:hover { background: #E9E9E9; }
+#sidebar-nav.fixed { border: 1px solid #d0d0d0; top: 130px !important; }
