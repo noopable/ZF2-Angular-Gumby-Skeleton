@@ -1,0 +1,9 @@
+#my-tile-container li.tile { display: inline-block; float: left; padding-left: 0.95745%; padding-right: 0.95745%; width: 100%; min-height: 300px; height: auto; }
+@media only screen and (min-width: 0px) { #my-tile-container li.tile { width: 100%; } }
+@media only screen and (min-width: 768px) { #my-tile-container li.tile { width: 50%; } }
+@media only screen and (min-width: 940px) { #my-tile-container li.tile { width: 25%; } }
+
+#my-small-tile-container li.tile { display: inline-block; float: left; padding-left: 0.95745%; padding-right: 0.95745%; width: 100%; min-height: 220px; height: auto; }
+@media only screen and (min-width: 320px) { #my-small-tile-container li.tile { width: 100%; } }
+@media only screen and (min-width: 600px) { #my-small-tile-container li.tile { width: 50%; } }
+@media only screen and (min-width: 940px) { #my-small-tile-container li.tile { width: 33.33333%; } }
