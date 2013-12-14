@@ -1,0 +1,35 @@
+{
+    "name": "noopable/bug-application",
+    "description": "Skeleton Application for ZF2,AngularJS,Gumbyframework",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "framework",
+        "zf2"
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/noopable/np-composer-installer.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/noopable/Flower.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/noopable/page.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/noopable/zf2.git"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.10",
+        "zendframework/zendframework": "dev-master",
+        "noopable/np-composer-installer": "dev-master",
+        "noopable/page": "dev-master",
+	"noopable/flower": "dev-master"
+    },
+    "minimum-stability": "dev"
+}
