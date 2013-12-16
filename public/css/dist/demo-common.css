@@ -1,0 +1,5 @@
+.navbar h1 { color: white; font-size: 30px; }
+.navbar h1 a { color: white; }
+.navbar h1 a:hover { color: bisque; }
+
+.view { padding-top: 36px; }
