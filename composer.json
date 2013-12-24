@@ -27,9 +27,16 @@
     "require": {
         "php": ">=5.4.10",
         "zendframework/zendframework": "dev-master",
+        "zendframework/zend-developer-tools": "dev-master",
+        "doctrine/doctrine-orm-module": "dev-master",
+        "symfony/yaml": "dev-master",
+        "doctrine/data-fixtures": "dev-master",
+        "doctrine/migrations": "dev-master",
         "noopable/np-composer-installer": "dev-master",
         "noopable/page": "dev-master",
-	"noopable/flower": "dev-master"
+	"noopable/flower": "dev-master",
+        "zendframework/zend-developer-tools": "dev-master",
+        "bjyoungblood/bjy-profiler": "dev-master"
     },
     "minimum-stability": "dev"
 }

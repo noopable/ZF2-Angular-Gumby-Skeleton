@@ -4,4 +4,7 @@ bin
 composer
 noopable
 zendframework
+doctrine
+symfony
+bjyoungblood
 autoload.php
