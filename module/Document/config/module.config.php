@@ -99,5 +99,19 @@ return array(
                 return $sizeList[$size] . ' columns';
             },
         ),
-    )
+    ),
+    'doctrine' => array(
+        'driver' => array(
+            'document_entities' => array(
+                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
+                'cache' => 'array',
+                'paths' => array(__DIR__ . '/../src/Document/Model/Entity')
+            ),
+            'orm_default' => array(
+                'drivers' => array(
+                    'Document\Model\Entity' => 'document_entities'
+                ),
+            ),
+        ),
+    ),
 );
