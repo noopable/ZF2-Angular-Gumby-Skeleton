@@ -1,5 +1,5 @@
 <?php
-namespace Document\Model\Sandbox;
+namespace NpApp\Model\Sandbox;
 
 use Flower\Model\AbstractEntity;
 

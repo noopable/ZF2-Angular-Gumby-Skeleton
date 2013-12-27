@@ -6,10 +6,10 @@ return array(
     'service_manager' => array( 
         //Module.phpの getServiceConfigでも実装できる。ハードコートしたくなければこちらで。
         'factories' => array(
-            'Document_Repositories'
-                => 'Document\Service\RepositoryServiceFactory',
+            'NpApp_Repositories'
+                => 'NpApp\Service\RepositoryServiceFactory',
             'smtp_transport'  => 'Flower\Mail\SmtpTransportFactory',
-            'Document_Menu_Config' => 'Document\Service\MenuFilesFactory'
+            'NpApp_Menu_Config' => 'NpApp\Service\MenuFilesFactory'
         ),
         'shared' => array(
         ),
@@ -56,7 +56,7 @@ return array(
     ),
     'view_manager' => array(
         'template_path_stack' => array(
-            'document' => __DIR__ . '/../view',
+            'np-app' => __DIR__ . '/../view',
         ),
         'template_map' => array(
             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',

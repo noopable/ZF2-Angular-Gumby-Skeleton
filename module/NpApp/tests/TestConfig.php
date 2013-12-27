@@ -8,7 +8,7 @@
 return array(
     'modules' => array(
         'Flower',
-        'Document',
+        'NpApp',
     ),
     'module_listener_options' => array(
         'config_glob_paths' => array(

@@ -1,7 +1,7 @@
 <?php
 return array(
-            'Document\Controller\Index' => 'Document\Controller\IndexController',
+            'NpApp\Controller\Index' => 'NpApp\Controller\IndexController',
             'StandardPageController'  => 'Flower\Stdlib\Page\Controller\StandardPageController',
-            'Document\Controller\Error' => 'Document\Controller\ErrorController',
-            'not-found' => 'Document\Controller\NotFoundController',
+            'NpApp\Controller\Error' => 'NpApp\Controller\ErrorController',
+            'not-found' => 'NpApp\Controller\NotFoundController',
 );

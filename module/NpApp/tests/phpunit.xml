@@ -1,7 +1,7 @@
 <phpunit bootstrap="./Bootstrap.php" colors="true">
     <testsuites>
-        <testsuite name="Document Module Suite">
-            <directory>./DocumentTest</directory>
+        <testsuite name="NpApp Module Suite">
+            <directory>./NpAppTest</directory>
         </testsuite>
     </testsuites>
 </phpunit>

@@ -7,7 +7,7 @@ return array(
             'options' => array(
                 'route'    => '/',
                 'defaults' => array(
-                    '__NAMESPACE__' => 'Document\Controller',
+                    '__NAMESPACE__' => 'NpApp\Controller',
                     'page'   => 'topPage',
                     'controller'    => 'index',
                     'action'        => 'index',
@@ -26,7 +26,7 @@ return array(
                     'subdomain' => '(publisher)',
                 ),
                 'defaults' => array(
-                    '__NAMESPACE__' => 'Document\Controller\Publish',//Publishモジュールにリダイレクトすべきかどうか。
+                    '__NAMESPACE__' => 'NpApp\Controller\Publish',//Publishモジュールにリダイレクトすべきかどうか。
                     'controller'    => 'index',
                     'action'        => 'index',
                     'subdomain'     => 'publisher',

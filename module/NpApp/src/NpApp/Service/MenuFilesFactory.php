@@ -1,5 +1,5 @@
 <?php
-namespace Document\Service;
+namespace NpApp\Service;
 /*
  *
  *

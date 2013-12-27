@@ -1,5 +1,5 @@
 <?php
-namespace DocumentTest;
+namespace NpAppTest;
 /**
  * This file is copy from zf2/tutorial/album
  * 

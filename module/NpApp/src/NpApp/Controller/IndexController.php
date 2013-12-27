@@ -5,7 +5,7 @@
  * ページリソースとしての動作と、コントローラーとしての動作の両方を実装する。
  */
 
-namespace Document\Controller;
+namespace NpApp\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
@@ -28,8 +28,8 @@ class IndexController extends AbstractActionController
         //暫定的に、配列を返す
         return array('items' => array('foo' => 'bar'));
         $sl = $this->getServiceLocator();
-        if (! $sl->has('Document_Repositories')) {
-            $message = "Document_Repositories not found";
+        if (! $sl->has('NpApp_Repositories')) {
+            $message = "NpApp_Repositories not found";
             if (isset($this->logger)) {
                 $this->logger->log($message);
             }
@@ -39,7 +39,7 @@ class IndexController extends AbstractActionController
             return array('error' => ['message' => $message]);
         }
         
-        $repositoryManager = $sl->get('Document_Repositories');
+        $repositoryManager = $sl->get('NpApp_Repositories');
         
         $repository = $repositoryManager->byName('Item');
 

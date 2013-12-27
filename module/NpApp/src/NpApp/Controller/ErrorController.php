@@ -7,7 +7,7 @@
  *
  */
 
-namespace Document\Controller;
+namespace NpApp\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 //use Zend\Mvc\Controller\AbstractActionController;

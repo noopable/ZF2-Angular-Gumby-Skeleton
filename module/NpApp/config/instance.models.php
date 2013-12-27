@@ -4,7 +4,7 @@ return array(
         //リソースfactoryでブリッジ指定したサービスは、Aliasを張ることでDIで使用可能になる。
         //このalias指定がないと、パラメーターとして指定したときインスタンスと解釈してくれない。
         'dbAdapter' => 'Zend\Db\Adapter\Adapter',
-        'DocumentCollection' => 'Document\Model\Repository\Document\DocumentCollection',
+        'NpAppCollection' => 'NpApp\Model\Repository\NpApp\NpAppCollection',
         'ItemTable' => 'Zend\Db\TableGateway\TableGateway',
         'ClientTable' =>   'Zend\Db\TableGateway\TableGateway',
         'SandboxTable' =>   'Zend\Db\TableGateway\TableGateway',
@@ -17,10 +17,10 @@ return array(
             'adapter' => 'dbAdapter',
         ),
     ),
-    'Document\Model\Repository\Sandbox' => array(
+    'NpApp\Model\Repository\Sandbox' => array(
         'parameters' => array(
             'name' => 'sandbox',
-            'entityPrototype' => 'Document\Model\Sandbox\Sandbox',
+            'entityPrototype' => 'NpApp\Model\Sandbox\Sandbox',
             'tableGateway' => 'SandboxTable',
         ),
     ),
@@ -31,23 +31,23 @@ return array(
         ),
     ),
     //'Zend\InputFilter\InputFilter' => array(),
-    'Document\Model\Client\Client' => array(
+    'NpApp\Model\Client\Client' => array(
         'parameters' => array(
             'array' => array(),
         ),
     ),
-    'Document\Model\Repository\ClientDb' => array(
+    'NpApp\Model\Repository\ClientDb' => array(
         'parameters' => array(
             'name' => 'client',
-            'entityPrototype' => 'Document\Model\Client\Client',
+            'entityPrototype' => 'NpApp\Model\Client\Client',
             'tableGateway' => 'ClientTable',
         ),
     ),
-    'Document\Model\Repository\ClientSession' => array(
+    'NpApp\Model\Repository\ClientSession' => array(
         'parameters' => array(
             'name' => 'cart',
-            'entityPrototype' => 'Document\Model\Client\Client',
-            'namespace' => 'Document\Client',
+            'entityPrototype' => 'NpApp\Model\Client\Client',
+            'namespace' => 'NpApp\Client',
         ),
     ),
 );

@@ -27,7 +27,7 @@ return array(
             $b->block('content',
                  array(
                     'options' => array(
-                        'template'=>'document/index/index',
+                        'template'=>'np-app/index/index',
                         //'captureTo' => 'content',
                         'viewModelAppend' => true,
                     ),

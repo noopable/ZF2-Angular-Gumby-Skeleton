@@ -1,5 +1,5 @@
 <?php
-namespace Document\Service;
+namespace NpApp\Service;
 
 use Flower\Model\Service\RepositoryServiceFactory as AbstractRSF;
 /**
@@ -12,13 +12,13 @@ class RepositoryServiceFactory extends AbstractRSF {
      *
      * @var string
      */
-    protected $configId = 'document_repositories';
+    protected $configId = 'np-app_repositories';
     
     /**
      *
      * @var string
      */
-    protected $managerClass = 'Document\Service\RepositoryPluginManager';
+    protected $managerClass = 'NpApp\Service\RepositoryPluginManager';
     
     /**
      * whether or not use DependencyInjector

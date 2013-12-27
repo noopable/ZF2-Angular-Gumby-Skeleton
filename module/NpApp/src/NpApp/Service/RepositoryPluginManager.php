@@ -1,5 +1,5 @@
 <?php
-namespace Document\Service;
+namespace NpApp\Service;
 
 /**
  * Description of RepositoryPluginManager
@@ -15,7 +15,7 @@ class RepositoryPluginManager extends \Flower\Model\Service\RepositoryPluginMana
      * 
      * @var string 
      */
-    protected $pluginNameSpace = 'Document\Model\Repository';
+    protected $pluginNameSpace = 'NpApp\Model\Repository';
     
     public function loadRepository($name, array $params = array())
     {

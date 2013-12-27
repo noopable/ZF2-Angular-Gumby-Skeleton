@@ -1,5 +1,5 @@
 <?php
-namespace Document;
+namespace NpApp;
 
 use Zend\Mvc\MvcEvent;
 

@@ -1,5 +1,5 @@
 <?php
-namespace Document\Model\Repository;
+namespace NpApp\Model\Repository;
 
 use Flower\Model\AbstractDbTableRepository;
 use Zend\Db\TableGateway\TableGatewayInterface;

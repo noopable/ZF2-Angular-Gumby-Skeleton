@@ -1,5 +1,5 @@
 <?php
-namespace Document\Exception;
+namespace NpApp\Exception;
 /**
  * Description of RuntimeException
  *

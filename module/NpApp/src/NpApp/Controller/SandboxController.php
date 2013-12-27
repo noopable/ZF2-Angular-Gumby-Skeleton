@@ -5,7 +5,7 @@
  * ページリソースとしての動作と、コントローラーとしての動作の両方を実装する。
  */
 
-namespace Document\Controller;
+namespace NpApp\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
@@ -23,8 +23,8 @@ class SandboxController extends AbstractActionController
         //暫定的に、配列を返す
         //これをサービス化する。
         $sl = $this->getServiceLocator();
-        if (! $sl->has('Document_Repositories')) {
-            $message = "Document_Repositories not found";
+        if (! $sl->has('NpApp_Repositories')) {
+            $message = "NpApp_Repositories not found";
             if (isset($this->logger)) {
                 $this->logger->log($message);
             }
@@ -34,8 +34,8 @@ class SandboxController extends AbstractActionController
             return array('error' => ['message' => $message]);
         }
         
-        $repositoryManager = $sl->get('Document_Repositories');
-        /* @var $repository \Document\Model\Repository\Sandbox   */
+        $repositoryManager = $sl->get('NpApp_Repositories');
+        /* @var $repository \NpApp\Model\Repository\Sandbox   */
         $repository = $repositoryManager->byName('Sandbox');
         
         $sandbox = $repository->create();
