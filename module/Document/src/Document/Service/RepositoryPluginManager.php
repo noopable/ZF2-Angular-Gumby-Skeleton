@@ -19,10 +19,12 @@ class RepositoryPluginManager extends \Flower\Model\Service\RepositoryPluginMana
     
     public function loadRepository($name, array $params = array())
     {
-        $repository = $this->getServiceLocator()->get('Di')->get($name, $params);
+        //$repository = $this->getServiceLocator()->get('Di')->get($name, $params);
 
-        $repository->initialize($this);
-        return $repository;
+        //$repository->initialize($this);
+        //initializeはinitializerが処理してくれる。
+        return $this->byName($name, $params);
+        //return $repository;
     }
 
 }
