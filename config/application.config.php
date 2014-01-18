@@ -5,6 +5,7 @@ return array(
         'Application',
         'Flower',
         'Page',
+        'NpDocument',
         'NpApp',
     ),
 

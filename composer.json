@@ -13,11 +13,11 @@
         },
         {
             "type": "git",
-            "url": "https://github.com/noopable/Flower.git"
+            "url": "https://github.com/noopable/np-app.git"
         },
         {
             "type": "git",
-            "url": "https://github.com/noopable/page.git"
+            "url": "https://github.com/noopable/np-document.git"
         },
         {
             "type": "git",
@@ -28,8 +28,8 @@
         "php": ">=5.4.10",
         "zendframework/zendframework": "dev-master",
         "noopable/np-composer-installer": "dev-master",
-        "noopable/page": "dev-master",
-	"noopable/flower": "dev-master"
+        "noopable/np-app": "dev-master",
+        "noopable/np-document": "dev-master"
     },
     "minimum-stability": "dev"
 }
