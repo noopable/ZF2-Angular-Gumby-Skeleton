@@ -6,7 +6,7 @@ return array(
         'Flower',
         'Page',
         'NpDocument',
-        'NpApp',
+        'np-app' => 'NpApp',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
