@@ -11,13 +11,7 @@ nbproject
 .idea
 .project
 .settings
+composer.phar
 composer.lock
-<<<<<<< HEAD
 vendor/bin
-=======
-INSTALL.txt
-LICENSE.txt
-README.txt
-demos/
-extras/documentation
->>>>>>> Add composer with some modules
+vendor/
