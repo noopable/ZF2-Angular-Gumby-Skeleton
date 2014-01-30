@@ -1,0 +1,7 @@
+<phpunit bootstrap="./Bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="Skeleton Suite">
+            <directory>./NpAppSkeletonTest</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
