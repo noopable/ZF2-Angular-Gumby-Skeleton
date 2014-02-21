@@ -47,12 +47,12 @@ class SkipLinkTest extends \PHPUnit_Framework_TestCase
 <ul id="sidebar-nav" gumby-fixed="1" gumby-top="top">
   <!-- start content CallbackRender -->
   <li>
-  <a gumby-offset="-100" gumby-update gumby-duration="600" gumby-goto="[data-target=\'c1\']" href="#c1">c1-label</a>
+  <a gumby-offset="-100" gumby-update gumby-duration="600" gumby-goto="[data-target=\'c1\']" class="skip" href="#c1">c1-label</a>
   </li>
   <!-- end content CallbackRender -->
   <!-- start content CallbackRender -->
   <li>
-  <a gumby-offset="-100" gumby-update gumby-duration="600" gumby-goto="[data-target=\'c2\']" href="#c2">c2-label</a>
+  <a gumby-offset="-100" gumby-update gumby-duration="600" gumby-goto="[data-target=\'c2\']" class="skip" href="#c2">c2-label</a>
   </li>
   <!-- end content CallbackRender -->
 </ul>
@@ -93,12 +93,12 @@ class SkipLinkTest extends \PHPUnit_Framework_TestCase
 <ul id="sidebar-nav" gumby-fixed="1" gumby-top="top">
   <!-- start content CallbackRender -->
   <li>
-  <a gumby-offset="-100" gumby-update gumby-duration="600" gumby-goto="[data-target=\'c1\']" href="#c1">c1-label</a>
+  <a gumby-offset="-100" gumby-update gumby-duration="600" gumby-goto="[data-target=\'c1\']" class="skip" href="#c1">c1-label</a>
   </li>
   <!-- end content CallbackRender -->
   <!-- start content CallbackRender -->
   <li>
-  <a gumby-offset="-100" gumby-update gumby-duration="600" gumby-goto="[data-target=\'c2\']" href="#c2">c2-label</a>
+  <a gumby-offset="-100" gumby-update gumby-duration="600" gumby-goto="[data-target=\'c2\']" class="skip" href="#c2">c2-label</a>
   </li>
   <!-- end content CallbackRender -->
 </ul>
