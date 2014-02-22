@@ -39,7 +39,8 @@
         "noopable/np-app": "dev-master",
         "noopable/page": "dev-master",
         "noopable/Flower": "dev-master",
-        "noopable/np-document": "dev-master"
+        "noopable/np-document": "dev-master",
+        "evandotpro/edp-superluminal": "dev-master"
     },
     "minimum-stability": "dev"
 }
