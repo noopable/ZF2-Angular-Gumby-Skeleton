@@ -1,0 +1,17 @@
+/*
+
+@copyright Copyright (c) 2013-2014 KipsProduction (http://www.kips.gr.jp)
+@license   http://www.kips.gr.jp/newbsd/LICENSE.txt New BSD License
+*/
+
+/* 
+    Created on : 2014/02/28, 9:12:56
+    Author     : Tomoaki Kosugi <kosugi at kips.gr.jp>
+*/
+
+h1.lead { border-bottom: 1px dotted #ccc; margin-bottom: 30px; }
+.ttip.example { float: left; background: #eee; border: 1px dotted #ccc; padding: 20px; }
+.row, .columns {border: #0000FF dotted thick;}
+.tiles li, .tile {
+    border: #d04526 dotted thin;
+}
