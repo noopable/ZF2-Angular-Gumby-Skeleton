@@ -6,4 +6,4 @@
 	url = https://github.com/noopable/Gumby.git
 [submodule "vendor/Claymate"]
 	path = vendor/Claymate
-	url = git@github.com:GumbyFramework/Claymate.git
+	url = https://github.com/GumbyFramework/Claymate.git
