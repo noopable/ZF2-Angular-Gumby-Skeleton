@@ -43,6 +43,7 @@
 		// bind to specified event and trigger
 		this.$el.on(this.on, function(e) {
 			e.preventDefault();
+                        e.stopPropagation();
 			scope.trigger(scope.triggered);
 
 		// listen for gumby.trigger to dynamically trigger toggle/switch

@@ -24,6 +24,7 @@
 		// skip to target element on click or trigger of gumby.skipTo event
 		this.$el.on(Gumby.click+' gumby.skip', function(e) {
 			e.preventDefault();
+                        e.stopPropagation();
 
 			if(e.namespace === 'skip') {
 				Gumby.debug('Skip event triggered', scope.$el);

@@ -107,6 +107,7 @@
 				// if no passed attribute found we should halt form submit
 				if(!$this.data('passed')) {
 					e.preventDefault();
+                                        e.stopPropagation();
 
 					// loop round validation objects and validate each
 					var reqLength = validations.length, i;

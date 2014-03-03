@@ -18,6 +18,7 @@
 		// listen for click event on tab nav and custom gumby set event
 		this.$nav.children('a').on(Gumby.click, function(e) {
 			e.preventDefault();
+                        e.stopPropagation();
 			scope.click($(this));
 		});
 

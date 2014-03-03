@@ -18,6 +18,7 @@
 		this.$el.on(Gumby.click, function(e) {
 			// prevent radio button checking, we'll do that manually
 			e.preventDefault();
+                        e.stopPropagation();
 
 			// do nothing if radio is disabled
             if (scope.$input.is('[disabled]')) {
