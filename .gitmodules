@@ -7,3 +7,7 @@
 [submodule "vendor/Claymate"]
 	path = vendor/Claymate
 	url = https://github.com/GumbyFramework/Claymate.git
+[submodule "data"]
+	path = data
+	url = git@github.com:noopable/gumby-demo-data
+	ignore = dirty
